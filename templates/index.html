@@ -1,0 +1,16 @@
+<html>
+    <script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
+    <body>
+
+        <div>
+            <span>My state value: {{ name }} </span>
+        </div>
+        <form hx-post="/submit" hx-target="#response">
+            <label>Name: <input type="text" name="name"></label>
+            <label>Email: <input type="text" name="email"></label>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="response"></div>
+    </body>
+</html>
